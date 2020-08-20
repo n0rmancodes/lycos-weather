@@ -1,0 +1,31 @@
+{
+  "name": "lycos-weather",
+  "version": "1.0.1",
+  "description": "lycos weather scraper.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0rmancodes/lycos-weather.git"
+  },
+  "keywords": [
+    "weather",
+    "lycos"
+  ],
+  "author": "n0rmancodes",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/n0rmancodes/lycos-weather/issues"
+  },
+  "homepage": "https://github.com/n0rmancodes/lycos-weather#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "got": "^11.5.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
+}

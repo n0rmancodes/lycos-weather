@@ -1,21 +1,13 @@
-# lycos-weather
-NPM package to scrape Lycos's Weather pages.
-
-Although there is no license on the code itself, Lycos owns the data itself.
-
-Install on NPM via ``npm i lycos-weather``.
-
-## Sample Code
-
-This gets weather data in New York City.
-
-```js
-const lw = require("lycos-weather");
+const lw = require("../index.js");
 const q = "10007";
 // new york ny zip code
 
+console.log("- searching '" + q + "' in lycos weather");
+
 lw.search(q, function(err, resp) {
     if (resp) {
+        console.log(resp[0]);
+        console.log("- getting '" + resp[0].location + "' on lycos");
         lw.get(resp[0].href, function (err, resp) {
             if (err) {
                 console.log(err)
@@ -25,6 +17,7 @@ lw.search(q, function(err, resp) {
         })
     } else {
         if (err.code == "oneResult") {
+            console.log("[!] resolving the one result error")
             lw.get(err.url, function (err, resp) {
                 if (err) {
                     console.log(err)
@@ -37,4 +30,3 @@ lw.search(q, function(err, resp) {
         }
     }
 })
-```
