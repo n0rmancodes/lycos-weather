@@ -1,6 +1,6 @@
 {
   "name": "lycos-weather",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "lycos weather scraper.",
   "main": "index.js",
   "scripts": {

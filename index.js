@@ -38,6 +38,8 @@ exports.search = (query, cb) => {
                     if (!$(".row .column ul li a")[c].children[0]) {continue;}
                     if (!$(".row .column ul li a")[c].children[0].data) {continue;}
                     if ($(".row .column ul li a")[c].children[0].data == "!DOCTYPE html") {continue;}
+                    if (!$(".row .column ul li a")[c].attribs) {continue;} 
+                    if (!$(".row .column ul li a")[c].attribs.href) {continue;} 
                     var data = {
                         "location": $(".row .column ul li a")[c].children[0].data,
                         "href": "http://weather.lycos.com" + $(".row .column ul li a")[c].attribs.href
